@@ -18,7 +18,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Trusted logistics partner for businesses across NCR. 8+ years of reliable freight & delivery services.
+              Trusted logistics partner for businesses across NCR. 5+ years of reliable freight & delivery services.
             </p>
           </div>
 

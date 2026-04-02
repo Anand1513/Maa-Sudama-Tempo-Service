@@ -49,13 +49,25 @@ export const vehicles = [
     fullDayNote: "10AM–5PM, max 100km",
     useCases: ["Heavy cargo transport", "Construction material", "Bulk B2B delivery"],
   },
+  {
+    name: "Mahindra Supro Truck",
+    image: "/vehicles/mahindra-supro-cng-duo-1686291787.webp",
+    bedSize: "8ft",
+    capacity: "≤ 1 Ton",
+    baseFare: "₹500",
+    baseFareNote: "first 3km",
+    perKm: "₹31–35/km",
+    fullDay: "₹2,500/day",
+    fullDayNote: "10AM–5PM, max 100km",
+    useCases: ["Factory supply runs", "Retail distribution", "Event logistics"],
+  },
 ];
 
 export const whyChooseUs = [
   {
     num: "01",
     title: "Guaranteed Fleet",
-    description: "4 vehicle types always ready — no third-party dependencies. Your shipment moves on time, every time.",
+    description: "5 vehicle types always ready — no third-party dependencies. Your shipment moves on time, every time.",
     icon: Truck,
   },
   {
@@ -91,10 +103,10 @@ export const whyChooseUs = [
 ];
 
 export const stats = [
-  { value: "8+", label: "Years" },
+  { value: "5+", label: "Years" },
   { value: "4,130+", label: "Trips" },
   { value: "20+", label: "Companies" },
-  { value: "4", label: "Vehicle Types" },
+  { value: "5", label: "Vehicle Types" },
   { value: "100%", label: "On-time" },
 ];
 

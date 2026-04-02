@@ -25,7 +25,7 @@ const About = () => {
             </h1>
             <p className="text-muted-foreground text-lg font-body leading-relaxed">
               Maa Sudama Tempo Service was founded with a simple mission: provide businesses with reliable, 
-              transparent, and affordable logistics. Over 8 years later, we've completed 4,130+ trips 
+              transparent, and affordable logistics. Over 5 years later, we've completed 4,130+ trips 
               for 20+ companies across the NCR region — building trust one delivery at a time.
             </p>
           </motion.div>
@@ -67,7 +67,7 @@ const About = () => {
               <p className="text-primary font-display font-semibold text-sm uppercase tracking-wider mb-2">Proprietor</p>
               <h2 className="font-display font-bold text-3xl mb-4">Kanchan Mishra</h2>
               <p className="text-muted-foreground font-body leading-relaxed mb-6">
-                With over 8 years in the logistics industry, Kanchan Mishra built Maa Sudama Tempo Service 
+                With over 5 years in the logistics industry, Kanchan Mishra built Maa Sudama Tempo Service 
                 from the ground up with a focus on direct client relationships, full accountability, and 
                 transparent operations. Every client gets direct access to the proprietor — no middlemen, 
                 no corporate runarounds.

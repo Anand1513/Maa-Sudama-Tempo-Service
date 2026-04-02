@@ -177,10 +177,10 @@ const Index = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="text-center mb-12">
             <h2 className="font-display font-bold text-3xl sm:text-4xl mb-3">Our <span className="text-primary">Fleet</span></h2>
-            <p className="text-muted-foreground max-w-xl mx-auto font-body">Four vehicle types built for every logistics need — from light parcels to heavy cargo.</p>
+            <p className="text-muted-foreground max-w-xl mx-auto font-body">Five vehicle types built for every logistics need — from light parcels to heavy cargo.</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
             {vehicles.map((v, i) => (
               <motion.div
                 key={v.name}
