@@ -9,9 +9,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-display font-black text-lg">M</span>
-              </div>
+              <img src="/logo.png" alt="Maa Sudama Tempo Service" className="w-10/10 h-10 object-contain rounded-lg" />
               <div>
                 <p className="font-display font-bold text-sm text-foreground">Maa Sudama</p>
                 <p className="font-display text-xs text-primary">Tempo Service</p>

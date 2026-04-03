@@ -86,9 +86,7 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between h-16 px-4 lg:px-8">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-            <span className="text-primary-foreground font-display font-black text-lg">M</span>
-          </div>
+          <img src="/logo.png" alt="Maa Sudama Tempo Service" className="w-10 h-10 object-contain rounded-lg" />
           <div className="hidden sm:block">
             <p className="font-display font-bold text-sm text-foreground leading-tight">Maa Sudama</p>
             <p className="font-display text-xs text-primary leading-tight">Tempo Service</p>
