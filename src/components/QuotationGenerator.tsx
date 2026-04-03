@@ -186,98 +186,85 @@ const quotationTemplate = (companyName: string, companyAddress: string, dateStr:
 
     <div class="two-col" style="margin-top:12px;">
       <div>
-        <div class="section-title">Full-Day Corporate Packages</div>
-        <div style="display:flex;gap:8px;">
-          <div class="pkg-box">
-            <div class="pkg-title">Carry / Ace / Supro</div>
-            <div class="big-price">₹2,500 <span>/ day</span></div>
-            <div class="pkg-row"><span class="pkg-key">Shift</span><span class="pkg-val">10 AM – 5 PM (7 hrs)</span></div>
-            <div class="pkg-row"><span class="pkg-key">Distance</span><span class="pkg-val">Max 100 km</span></div>
-            <div class="pkg-row"><span class="pkg-key">Extra km</span><span class="pkg-val">Per-km rate applies</span></div>
-          </div>
-          <div class="pkg-box">
-            <div class="pkg-title">Bolero Maxx PU</div>
-            <div class="big-price">₹3,500 <span>/ day</span></div>
-            <div class="pkg-row"><span class="pkg-key">Shift</span><span class="pkg-val">10 AM – 5 PM (7 hrs)</span></div>
-            <div class="pkg-row"><span class="pkg-key">Distance</span><span class="pkg-val">Max 100 km</span></div>
-            <div class="pkg-row"><span class="pkg-key">Extra km</span><span class="pkg-val">Per-km rate applies</span></div>
+        <div class="section-title">Why Choose Us (For Industrial Clients)</div>
+        <div class="pkg-box" style="background:var(--white);border-color:#e2ebf5;">
+          <div style="font-size:8.5px;color:var(--navy);line-height:1.6;padding:2px 0;">
+            <div style="margin-bottom:4px;">• <b>Same-day &amp; urgent dispatch</b> capability</div>
+            <div style="margin-bottom:4px;">• <b>No-entry timing delivery</b> (No delay in restricted hours)</div>
+            <div style="margin-bottom:4px;">• <b>Real-time GPS tracking</b> (Location available even if driver phone is off) 🔥</div>
+            <div style="margin-bottom:4px;">• <b>Dedicated vehicle availability</b> for regular operations</div>
+            <div style="margin-bottom:4px;">• <b>Verified &amp; experienced drivers</b> for industrial handling</div>
+            <div style="margin-bottom:4px;">• <b>Transparent billing</b> with GST compliance (ITC eligible)</div>
+            <div style="margin-bottom:4px;">• <b>Quick response time</b> (Placement within 30–60 mins)</div>
+            <div style="margin-bottom:2px;">• <b>Real-time coordination</b> via WhatsApp tracking</div>
           </div>
         </div>
       </div>
       <div>
         <div class="section-title">Ancillary &amp; Payment Terms</div>
         <table>
-          <thead><tr><th style="text-align:left;">Charge Type</th><th>Rate</th></tr></thead>
+          <thead><tr><th style="text-align:left;">Charge Type</th><th>Rate / Policy</th></tr></thead>
           <tbody>
             <tr><td>Overtime (After 5:00 PM)</td><td class="range-cell">₹100–₹150 / hr <span style="font-size:7px;color:#888;">(Negotiable for regulars)</span></td></tr>
-            <tr><td>Extended Waiting</td><td class="range-cell">₹0.5–₹1.0 / min <span style="font-size:7px;color:#888;">(May be waived for regulars)</span></td></tr>
-            <tr><td>Standard Loading/Unloading</td><td style="color:#c0392b;font-weight:700;">Not Included</td></tr>
+            <tr><td>Extended Waiting</td><td class="range-cell">₹0.5–₹1.0 / min <span style="font-size:7px;color:#888;">(Waivable for regulars)</span></td></tr>
+            <tr><td>Loading/Unloading</td><td style="color:var(--navy);font-weight:600;font-size:8px;line-height:1.3;text-align:left;padding:4px 6px;">Basic assistance by driver/helper <b>included</b> for light goods. Heavy/bulk/multi-floor items charged extra.</td></tr>
           </tbody>
         </table>
-        <div style="margin-top:7px;">
-          <div class="term-card">
-            <div class="term-card-title">Payment Options</div>
-            <div class="term-item"><b>Corporate:</b> Monthly billing, payment within 10 days of invoice</div>
-            <div class="term-item"><b>Ad-hoc:</b> 30% advance + 70% on job completion</div>
-            <div class="term-item"><b>Standard:</b> Post-completion — same day or within 7 days</div>
-          </div>
-          <div style="margin-top:6px;background:#fffbec;border-left:3px solid #f59e0b;padding:6px 8px;font-size:8px;color:#7c5c00;line-height:1.6;">
-            ⚡ <b>Regular Customer Benefit:</b> Overtime &amp; waiting charges may be <b>reduced or fully waived</b> at proprietor&apos;s discretion for long-term and high-frequency clients. Loading/unloading assistance available on request &mdash; rates to be mutually agreed.
-          </div>
-        </div>
       </div>
     </div>
 
-    <div class="note-bar">
+    <div class="two-col" style="margin-top:10px;">
+      <div class="pkg-box" style="flex:1;">
+        <div class="pkg-title">Dedicated / Fixed Vehicle Support</div>
+        <div style="font-size:8px;color:var(--muted);line-height:1.5;">Dedicated vehicles can be provided for regular operations on a monthly or contractual basis. Pricing can be <b>customized</b> to ensure smooth &amp; uninterrupted logistics support.</div>
+      </div>
+      <div class="pkg-box" style="flex:1;">
+        <div class="pkg-title">Additional Support (Labour)</div>
+        <div style="font-size:8px;color:var(--muted);line-height:1.5;">Additional labour for heavy or bulk consignments can be arranged on request at <b>mutually agreed rates</b>. Ensuring your cargo is handled with care.</div>
+      </div>
+    </div>
+
+    <div class="term-card" style="margin-top:12px;">
+      <div class="term-card-title">Standard Payment Options</div>
+      <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:10px;">
+        <div class="term-item" style="border:none;"><b>Corporate:</b> Monthly billing, payment within 10 days</div>
+        <div class="term-item" style="border:none;"><b>Ad-hoc:</b> 30% advance + 70% on job completion</div>
+        <div class="term-item" style="border:none;"><b>Standard:</b> Post-completion (Same day or 7 days)</div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:12px;font-family:'Playfair Display',serif;font-weight:900;color:var(--navy);font-size:12px;letter-spacing:0.5px;">
+      "We aim to provide reliable, timely, and hassle-free transport support."
+    </div>
+
+    <div class="note-bar" style="margin-top:8px;">
       <b>Exclusions:</b> Tolls, parking &amp; third-party labour not included. &nbsp;|&nbsp;
-      <b>GST @ 18%</b> applicable if invoice required (GSTIN: 06AZJPM1895R2ZE — ITC eligible). &nbsp;|&nbsp;
+      <b>GST @ 18%</b> applicable (ITC eligible). &nbsp;|&nbsp;
       All rates valid within NCR/Faridabad zone until <b>${validStr}</b>.
     </div>
 
-    <div class="wa-banner">
-      <div class="wa-logo">💬</div>
+    <div class="wa-banner" style="margin-top:8px;padding:8px 12px;">
+      <div class="wa-logo" style="font-size:18px;">💬</div>
       <div class="wa-content">
-        <div class="wa-title"><span>WhatsApp</span> Dedicated Tracking Group — Per Consignment</div>
-        <div class="wa-desc">Har shipment ke liye ek <b style="color:#7fffc4;">dedicated WhatsApp group</b> banaya jaata hai...</div>
+        <div class="wa-title" style="font-size:9px;">WhatsApp Dedicated Tracking — Real-time Updates</div>
+        <div class="wa-desc" style="font-size:8px;">Har shipment ke liye dedicated group — instant proof of delivery share hota hai.</div>
       </div>
+      <div class="noentry-badge" style="margin-top:0;font-size:7px;padding:3px 6px;">🚫 No Entry Pass ✅</div>
     </div>
 
-    <div class="doc-banner">
-      <div class="doc-icon">📄</div>
-      <div class="doc-content">
-        <div class="doc-title">Document &amp; Cheque Pickup / Delivery Service</div>
-        <div class="doc-desc">Aapko khud aana ki zarurat nahi — hamara driver aapka <b style="color:var(--gold-light);">cheque collect kar sakta hai</b>...</div>
-      </div>
-    </div>
-
-    <div class="noentry-banner">
-      <div class="noentry-badge">🚫 No Entry<br>Pass</div>
-      <div class="noentry-content">
-        <div class="noentry-title"><span>No Entry Pass</span> — 24×7 Delivery Advantage</div>
-        <div class="noentry-desc">Hamare <b style="color:#ffb366;">saare vehicles ke paas valid No Entry Pass hain</b> — iska matlab hum No Entry timing mein bhi delivery kar sakte hain jab baaki transporters ruk jaate hain. Aapka cargo kabhi delay nahi hoga.
-        </div>
-        <div class="noentry-pills">
-          <span class="noentry-pill">✅ No Entry Timing Coverage</span>
-          <span class="noentry-pill">🕐 Early Morning Slots</span>
-          <span class="noentry-pill">🌙 Late Night Delivery</span>
-          <span class="noentry-pill">🏙️ City Centre Access</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="section-title" style="margin-top:12px;">Acceptance &amp; Signatures</div>
-    <div class="sig-row">
+    <div class="sig-row" style="margin-top:10px;">
       <div class="sig-block">
         <div class="sig-for">For: Maa Sudama Tempo Service</div>
-        <div class="sig-line"></div>
+        <div class="sig-line" style="margin:12px 0 4px;"></div>
         <div class="sig-label">Kanchan Mishra (Proprietor) &nbsp;|&nbsp; Date: ${dateStr}</div>
       </div>
       <div class="sig-block">
         <div class="sig-for">For: ${companyName}</div>
-        <div class="sig-line"></div>
+        <div class="sig-line" style="margin:12px 0 4px;"></div>
         <div class="sig-label">Authorised Signatory &nbsp;|&nbsp; Name: _______________ &nbsp;|&nbsp; Date: _______________</div>
       </div>
     </div>
+  </div>
   </div>
 
   <div class="footer">
