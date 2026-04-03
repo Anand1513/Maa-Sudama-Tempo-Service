@@ -96,6 +96,15 @@ const quotationTemplate = (companyName: string, companyAddress: string, dateStr:
   .doc-desc { font-size: 8.5px; color: rgba(255,255,255,0.78); line-height: 1.5; }
   .doc-pills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 5px; }
   .doc-pill { background: rgba(200,150,12,0.15); border: 1px solid rgba(200,150,12,0.35); color: var(--gold-light); font-size: 7.5px; font-weight: 600; padding: 2px 7px; border-radius: 10px; }
+  .noentry-banner { background: linear-gradient(135deg, #1a0a00 0%, #3d1500 100%); border-left: 4px solid #ff6b00; padding: 10px 14px; display: flex; align-items: flex-start; gap: 10px; margin-top: 7px; position: relative; overflow: hidden; }
+  .noentry-banner::before { content: ''; position: absolute; right: -20px; top: -20px; width: 80px; height: 80px; border-radius: 50%; background: rgba(255,107,0,0.1); }
+  .noentry-badge { background: #ff6b00; color: white; font-size: 8px; font-weight: 800; padding: 2px 7px; border-radius: 3px; letter-spacing: 1px; text-transform: uppercase; white-space: nowrap; margin-top: 2px; align-self: flex-start; flex-shrink: 0; }
+  .noentry-content { flex: 1; }
+  .noentry-title { font-size: 9.5px; font-weight: 700; color: #ffb366; letter-spacing: 0.5px; margin-bottom: 3px; }
+  .noentry-title span { color: #ff6b00; font-size: 10.5px; }
+  .noentry-desc { font-size: 8.5px; color: rgba(255,255,255,0.78); line-height: 1.5; }
+  .noentry-pills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 5px; }
+  .noentry-pill { background: rgba(255,107,0,0.15); border: 1px solid rgba(255,107,0,0.4); color: #ffb366; font-size: 7.5px; font-weight: 600; padding: 2px 7px; border-radius: 10px; }
   .sig-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 4px; }
   .sig-block { border-top: 2px solid var(--navy); padding-top: 7px; }
   .sig-for { font-size: 8px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--navy); }
@@ -231,6 +240,21 @@ const quotationTemplate = (companyName: string, companyAddress: string, dateStr:
       <div class="doc-content">
         <div class="doc-title">Document &amp; Cheque Pickup / Delivery Service</div>
         <div class="doc-desc">Aapko khud aana ki zarurat nahi — hamara driver aapka <b style="color:var(--gold-light);">cheque collect kar sakta hai</b>...</div>
+      </div>
+    </div>
+
+    <div class="noentry-banner">
+      <div class="noentry-badge">🚫 No Entry<br>Pass</div>
+      <div class="noentry-content">
+        <div class="noentry-title"><span>No Entry Pass</span> — 24×7 Delivery Advantage</div>
+        <div class="noentry-desc">Hamare <b style="color:#ffb366;">saare vehicles ke paas valid No Entry Pass hain</b> — iska matlab hum No Entry timing mein bhi delivery kar sakte hain jab baaki transporters ruk jaate hain. Aapka cargo kabhi delay nahi hoga.
+        </div>
+        <div class="noentry-pills">
+          <span class="noentry-pill">✅ No Entry Timing Coverage</span>
+          <span class="noentry-pill">🕐 Early Morning Slots</span>
+          <span class="noentry-pill">🌙 Late Night Delivery</span>
+          <span class="noentry-pill">🏙️ City Centre Access</span>
+        </div>
       </div>
     </div>
 

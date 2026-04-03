@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Layout from "@/components/Layout";
 import { vehicles, whyChooseUs, stats, clientLogos } from "@/lib/data";
+import CoverageMap from "@/components/CoverageMap";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -221,7 +222,9 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Why Choose Us */}
+      {/* Coverage Map */}
+      <CoverageMap />
+
       <section className="py-20 bg-secondary/30">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="text-center mb-12">
