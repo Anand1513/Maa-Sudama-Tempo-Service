@@ -7,6 +7,8 @@ const quotationTemplate = (companyName: string, companyAddress: string, dateStr:
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Quotation – Maa Sudama Tempo Service</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -114,9 +116,11 @@ const quotationTemplate = (companyName: string, companyAddress: string, dateStr:
   .footer-left { font-size: 7.5px; color: rgba(255,255,255,0.45); }
   .footer-left b { color: rgba(255,255,255,0.75); }
   .footer-right { font-size: 7.5px; color: var(--gold); font-weight: 600; letter-spacing: 0.8px; }
-  .print-btn { margin-top: 18px; }
-  .print-btn button { background: #0D2545; color: white; border: none; padding: 10px 28px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600; cursor: pointer; letter-spacing: 1px; }
-  @media print { body { background: white; padding: 0; } .page { box-shadow: none; } .print-btn { display: none; } @page { margin: 0; size: A4; } }
+  .print-btn { margin-top: 18px; text-align: center; }
+  .print-btn button { background: #0D2545; color: white; border: none; padding: 10px 28px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600; cursor: pointer; letter-spacing: 1px; border-radius: 4px; }
+  .print-btn button:disabled { opacity: 0.5; cursor: not-allowed; }
+  .loading-msg { font-size: 11px; color: #888; margin-top: 6px; text-align: center; }
+  @media print { body { background: white; padding: 0; } .page { box-shadow: none; } .print-btn { display: none; } .loading-msg { display: none; } @page { margin: 0; size: A4; } }
 </style>
 </head>
 <body>
@@ -280,8 +284,26 @@ const quotationTemplate = (companyName: string, companyAddress: string, dateStr:
 </div>
 
 <div class="print-btn">
-  <button onclick="window.print()">🖨 PRINT / SAVE AS PDF</button>
+  <button id="printBtn" onclick="printReady()" disabled>⏳ Loading fonts...</button>
+  <div class="loading-msg" id="loadMsg">Please wait while fonts load for best quality PDF...</div>
 </div>
+<script>
+  function printReady() {
+    document.getElementById('printBtn').disabled = true;
+    document.getElementById('printBtn').textContent = '⏳ Preparing...';
+    document.fonts.ready.then(function() {
+      setTimeout(function() { window.print(); }, 300);
+    });
+  }
+  // Enable button once fonts are ready
+  document.fonts.ready.then(function() {
+    var btn = document.getElementById('printBtn');
+    var msg = document.getElementById('loadMsg');
+    btn.disabled = false;
+    btn.textContent = '🖨\u00A0 PRINT / SAVE AS PDF';
+    if (msg) msg.style.display = 'none';
+  });
+</script>
 </body>
 </html>`;
 
@@ -323,13 +345,15 @@ export function QuotationGenerator() {
 
     const finalHtml = quotationTemplate(companyName, address, dateStr, validStr);
 
-    const newWindow = window.open('', '_blank');
-    if (newWindow) {
-      newWindow.document.write(finalHtml);
-      newWindow.document.close();
-      // Optional: Wait for resources then print
-      // setTimeout(() => newWindow.print(), 500);
+    // Use Blob URL — more reliable than document.write on production
+    const blob = new Blob([finalHtml], { type: 'text/html;charset=utf-8' });
+    const blobUrl = URL.createObjectURL(blob);
+    const newWindow = window.open(blobUrl, '_blank');
+    if (!newWindow) {
+      alert('Popup blocked! Please allow popups for this site and try again.');
     }
+    // Revoke blob URL after 60 seconds to free memory
+    setTimeout(() => URL.revokeObjectURL(blobUrl), 60000);
   };
 
   return (
