@@ -187,27 +187,39 @@ const quotationTemplate = (companyName: string, companyAddress: string, dateStr:
     <div class="two-col" style="margin-top:12px;">
       <div>
         <div class="section-title">Why Choose Us (For Industrial Clients)</div>
-        <div class="pkg-box" style="background:var(--white);border-color:#e2ebf5;">
-          <div style="font-size:8.5px;color:var(--navy);line-height:1.6;padding:2px 0;">
+        <div class="pkg-box" style="background:var(--white);border-color:#e2ebf5;height:100%;">
+          <div style="font-size:8.5px;color:var(--navy);line-height:1.7;padding:2px 0;">
             <div style="margin-bottom:4px;">• <b>Same-day &amp; urgent dispatch</b> capability</div>
-            <div style="margin-bottom:4px;">• <b>No-entry timing delivery</b> (No delay in restricted hours)</div>
-            <div style="margin-bottom:4px;">• <b>Real-time GPS tracking</b> (Location available even if driver phone is off) 🔥</div>
-            <div style="margin-bottom:4px;">• <b>Dedicated vehicle availability</b> for regular operations</div>
-            <div style="margin-bottom:4px;">• <b>Verified &amp; experienced drivers</b> for industrial handling</div>
-            <div style="margin-bottom:4px;">• <b>Transparent billing</b> with GST compliance (ITC eligible)</div>
-            <div style="margin-bottom:4px;">• <b>Quick response time</b> (Placement within 30–60 mins)</div>
-            <div style="margin-bottom:2px;">• <b>Real-time coordination</b> via WhatsApp tracking</div>
+            <div style="margin-bottom:4px;">• <b>No-entry timing delivery</b> (No delay in city hours)</div>
+            <div style="margin-bottom:4px;">• <b>Real-time GPS tracking</b> (Active even if phone off) 🔥</div>
+            <div style="margin-bottom:4px;">• <b>Dedicated vehicle availability</b> for regular ops</div>
+            <div style="margin-bottom:4px;">• <b>Verified &amp; experienced drivers</b> for safe handling</div>
+            <div style="margin-bottom:4px;">• <b>Transparent billing</b> (GST &amp; ITC eligible)</div>
+            <div style="margin-bottom:2px;">• <b>Quick response</b> (Placement within 30–60 mins)</div>
           </div>
         </div>
       </div>
       <div>
-        <div class="section-title">Ancillary &amp; Payment Terms</div>
+        <div class="section-title">Full-Day Corporate Packages (Fixed Rates)</div>
+        <div style="display:flex;gap:6px;margin-bottom:8px;">
+          <div class="pkg-box">
+             <div class="pkg-title" style="font-size:9px;">Ace / Supro / Carry</div>
+             <div style="font-weight:700;color:var(--navy);font-size:14px;">₹2,500 <span style="font-size:8px;font-weight:400;color:var(--muted);">/day</span></div>
+             <div style="font-size:7.5px;color:var(--muted);margin-top:2px;">10AM – 5PM (Max 100km)</div>
+          </div>
+          <div class="pkg-box">
+             <div class="pkg-title" style="font-size:9px;">Bolero Maxx PU</div>
+             <div style="font-weight:700;color:var(--navy);font-size:14px;">₹3,500 <span style="font-size:8px;font-weight:400;color:var(--muted);">/day</span></div>
+             <div style="font-size:7.5px;color:var(--muted);margin-top:2px;">10AM – 5PM (Max 100km)</div>
+          </div>
+        </div>
+        <div class="section-title" style="margin-top:4px;">Ancillary &amp; Payment Terms</div>
         <table>
           <thead><tr><th style="text-align:left;">Charge Type</th><th>Rate / Policy</th></tr></thead>
           <tbody>
-            <tr><td>Overtime (After 5:00 PM)</td><td class="range-cell">₹100–₹150 / hr <span style="font-size:7px;color:#888;">(Negotiable for regulars)</span></td></tr>
-            <tr><td>Extended Waiting</td><td class="range-cell">₹0.5–₹1.0 / min <span style="font-size:7px;color:#888;">(Waivable for regulars)</span></td></tr>
-            <tr><td>Loading/Unloading</td><td style="color:var(--navy);font-weight:600;font-size:8px;line-height:1.3;text-align:left;padding:4px 6px;">Basic assistance by driver/helper <b>included</b> for light goods. Heavy/bulk/multi-floor items charged extra.</td></tr>
+            <tr><td>Overtime (Post 5PM)</td><td class="range-cell">₹100–150/hr <span style="font-size:7px;color:#888;">(Negotiable)</span></td></tr>
+            <tr><td>Extended Waiting</td><td class="range-cell">₹0.5–1.0/min <span style="font-size:7px;color:#888;">(Waivable)</span></td></tr>
+            <tr><td>Loading/Unloading</td><td style="color:var(--navy);font-weight:600;font-size:8px;line-height:1.2;text-align:left;padding:3px 5px;">Driver assistance <b>included</b> for light goods.</td></tr>
           </tbody>
         </table>
       </div>
