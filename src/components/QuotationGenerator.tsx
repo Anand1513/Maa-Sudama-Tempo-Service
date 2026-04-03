@@ -209,9 +209,9 @@ const quotationTemplate = (companyName: string, companyAddress: string, dateStr:
         <table>
           <thead><tr><th style="text-align:left;">Charge Type</th><th>Rate</th></tr></thead>
           <tbody>
-            <tr><td>Overtime (After 5:00 PM)</td><td class="range-cell">₹100–₹150 / hr</td></tr>
-            <tr><td>Extended Waiting</td><td class="range-cell">₹0.5–₹1.0 / min</td></tr>
-            <tr><td>Standard Loading/Unloading</td><td style="color:var(--green);font-weight:700;">Included</td></tr>
+            <tr><td>Overtime (After 5:00 PM)</td><td class="range-cell">₹100–₹150 / hr <span style="font-size:7px;color:#888;">(Negotiable for regulars)</span></td></tr>
+            <tr><td>Extended Waiting</td><td class="range-cell">₹0.5–₹1.0 / min <span style="font-size:7px;color:#888;">(May be waived for regulars)</span></td></tr>
+            <tr><td>Standard Loading/Unloading</td><td style="color:#c0392b;font-weight:700;">Not Included</td></tr>
           </tbody>
         </table>
         <div style="margin-top:7px;">
@@ -220,6 +220,9 @@ const quotationTemplate = (companyName: string, companyAddress: string, dateStr:
             <div class="term-item"><b>Corporate:</b> Monthly billing, payment within 10 days of invoice</div>
             <div class="term-item"><b>Ad-hoc:</b> 30% advance + 70% on job completion</div>
             <div class="term-item"><b>Standard:</b> Post-completion — same day or within 7 days</div>
+          </div>
+          <div style="margin-top:6px;background:#fffbec;border-left:3px solid #f59e0b;padding:6px 8px;font-size:8px;color:#7c5c00;line-height:1.6;">
+            ⚡ <b>Regular Customer Benefit:</b> Overtime &amp; waiting charges may be <b>reduced or fully waived</b> at proprietor&apos;s discretion for long-term and high-frequency clients. Loading/unloading assistance available on request &mdash; rates to be mutually agreed.
           </div>
         </div>
       </div>
