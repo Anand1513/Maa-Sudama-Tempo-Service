@@ -5,7 +5,7 @@ function xy(lon: number, lat: number) {
   return { x: Math.round((lon - 68) * 16.55), y: Math.round((37 - lat) * 20.34) };
 }
 
-const DELHI = xy(77.1, 28.7); // ~{x:150, y:170}
+const DELHI = { ...xy(77.1, 28.7), name: "Delhi NCR" }; // ~{x:150, y:170}
 
 const NORTH = [
   { ...xy(74.9, 32.7), name: "Jammu" },
@@ -73,7 +73,14 @@ function CityDot({ dest, color, r, delay, label }: {
     >
       <circle cx={dest.x} cy={dest.y} r={r} fill={color} />
       {label && (
-        <text x={dest.x + r + 3} y={dest.y + 4} fontSize="8" fill="rgba(255,255,255,0.65)" fontFamily="system-ui">
+        <text 
+          x={dest.x + r + 3} 
+          y={dest.y + 4} 
+          fontSize="8" 
+          fill="rgba(255,255,255,0.9)" 
+          fontFamily="system-ui"
+          style={{ textShadow: "0 0 2px rgba(0,0,0,0.8)" }}
+        >
           {dest.name}
         </text>
       )}
@@ -165,27 +172,28 @@ const CoverageMap = () => {
             <svg
               viewBox="0 0 480 590"
               className="w-full max-h-[520px]"
-              style={{ filter: "drop-shadow(0 0 24px rgba(245,158,11,0.08))" }}
+              style={{ filter: "drop-shadow(0 0 32px rgba(245,158,11,0.12))" }}
             >
               {/* India outline */}
               <motion.path
                 d={INDIA}
-                fill="rgba(255,255,255,0.03)"
-                stroke="rgba(255,255,255,0.12)"
-                strokeWidth="1.5"
+                fill="rgba(255,255,255,0.05)"
+                stroke="rgba(255,255,255,0.3)"
+                strokeWidth="2.5"
                 strokeLinejoin="round"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 1 }}
+                style={{ filter: "drop-shadow(0 0 10px rgba(255,255,255,0.15))" }}
               />
 
               {/* Nepal highlight */}
               <motion.path
                 d={NEPAL_REGION}
-                fill="rgba(255,107,53,0.12)"
-                stroke="rgba(255,107,53,0.5)"
-                strokeWidth="1"
+                fill="rgba(255,107,53,0.2)"
+                stroke="rgba(255,107,53,0.7)"
+                strokeWidth="1.5"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
@@ -195,8 +203,8 @@ const CoverageMap = () => {
               {/* North India soft glow cluster */}
               <motion.ellipse
                 cx={160} cy={145} rx={95} ry={75}
-                fill="rgba(245,158,11,0.04)"
-                stroke="rgba(245,158,11,0.08)"
+                fill="rgba(245,158,11,0.06)"
+                stroke="rgba(245,158,11,0.15)"
                 strokeWidth="1"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -206,7 +214,7 @@ const CoverageMap = () => {
 
               {/* Routes - North India */}
               {NORTH.map((d, i) => (
-                <RouteLine key={d.name} from={DELHI} to={d} color="#f59e0b" width={1.5} delay={0.3 + i * 0.08} />
+                <RouteLine key={d.name} from={DELHI} to={d} color="#f59e0b" width={2} delay={0.3 + i * 0.08} />
               ))}
 
               {/* Routes - Nepal */}
@@ -262,9 +270,9 @@ const CoverageMap = () => {
                 transition={{ delay: 0.5 }}
               >
                 <rect x={DELHI.x + 10} y={DELHI.y - 12} width={68} height={17} rx={4}
-                  fill="rgba(245,158,11,0.18)" stroke="rgba(245,158,11,0.5)" strokeWidth="0.5" />
+                  fill="rgba(245,158,11,0.25)" stroke="rgba(245,158,11,0.7)" strokeWidth="1" />
                 <text x={DELHI.x + 14} y={DELHI.y + 1} fontSize="9" fill="#f59e0b"
-                  fontFamily="system-ui" fontWeight="bold">Delhi NCR</text>
+                  fontFamily="system-ui" fontWeight="bold" style={{ textShadow: "0 0 4px rgba(0,0,0,0.5)" }}>Delhi NCR</text>
               </motion.g>
 
               {/* Nepal text */}
